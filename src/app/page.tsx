@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="space-y-16">
@@ -14,10 +15,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative rounded-lg overflow-hidden aspect-[4/5] border border-[rgba(84,18,18,0.15)]">
-              <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Students collaborating" className="absolute inset-0 h-full w-full object-cover" />
+              <Image src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Students collaborating" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
             </div>
             <div className="relative rounded-lg overflow-hidden aspect-[4/5] border border-[rgba(84,18,18,0.15)] translate-y-6">
-              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Study session" className="absolute inset-0 h-full w-full object-cover" />
+              <Image src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Study session" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
@@ -25,7 +26,7 @@ export default function Home() {
 
       <section className="rounded-lg bg-[rgba(84,18,18,0.05)] p-6 sm:p-10 grid gap-6 sm:grid-cols-[1fr_1.2fr] items-center">
         <div className="relative rounded-lg overflow-hidden aspect-[4/3] border border-[rgba(84,18,18,0.15)]">
-          <img src="https://images.unsplash.com/photo-1573166364268-0f5d31ec5f4b?q=80&w=1200&auto=format&fit=crop" alt="Principal portrait" className="absolute inset-0 h-full w-full object-cover" />
+          <Image src="https://images.unsplash.com/photo-1573166364268-0f5d31ec5f4b?q=80&w=1200&auto=format&fit=crop" alt="Principal portrait" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="space-y-3">
           <p>“</p>
@@ -50,7 +51,7 @@ export default function Home() {
 
       <section className="rounded-lg overflow-hidden">
         <div className="relative aspect-[16/6] rounded-lg border border-[rgba(84,18,18,0.15)]">
-          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1600&auto=format&fit=crop" alt="Campus life" className="absolute inset-0 h-full w-full object-cover" />
+          <Image src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1600&auto=format&fit=crop" alt="Campus life" fill sizes="100vw" className="object-cover" />
           <button className="absolute inset-0 m-auto h-14 w-14 rounded-full bg-foreground text-background grid place-items-center shadow-md/50 bg-opacity-90">▶</button>
         </div>
       </section>
@@ -126,7 +127,7 @@ export default function Home() {
               <blockquote className="opacity-90">{t.quote}</blockquote>
               <figcaption className="flex items-center gap-3 pt-2">
                 <span className="relative h-10 w-10 overflow-hidden rounded-full border border-[rgba(84,18,18,0.25)]">
-                  <img src={t.avatar} alt={t.name} className="absolute inset-0 h-full w-full object-cover" />
+                  <Image src={t.avatar} alt={t.name} fill sizes="40px" className="object-cover" />
                 </span>
                 <div>
                   <div className="font-semibold">{t.name}</div>
@@ -161,7 +162,7 @@ export default function Home() {
         <div className="sm:flex sm:items-center sm:justify-between gap-6">
           <div>
             <h2 className="text-2xl font-semibold">Contact Us</h2>
-            <p className="mt-2 max-w-2xl opacity-90">Have questions? We're here to help.</p>
+            <p className="mt-2 max-w-2xl opacity-90">Have questions? We&amp;apos;re here to help.</p>
           </div>
           <a href="/contact" className="mt-6 sm:mt-0 inline-flex items-center rounded-md px-5 py-2.5 border border-[rgba(84,18,18,0.3)] hover:bg-[rgba(84,18,18,0.06)] transition">Get in touch</a>
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function ContactPage() {
   return (
     <div className="space-y-10">
@@ -37,7 +38,7 @@ export default function ContactPage() {
             <p className="opacity-90">+234 (000) 000-0000</p>
           </div>
           <div className="relative rounded-md overflow-hidden aspect-[4/3] border border-[rgba(84,18,18,0.15)]">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" alt="Campus map placeholder" className="absolute inset-0 h-full w-full object-cover" />
+            <Image src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" alt="Campus map placeholder" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
           </div>
         </aside>
       </div>
