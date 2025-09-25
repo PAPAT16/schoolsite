@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: rgb(238, 238, 238);
+  --foreground: rgb(84, 18, 18);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'General Sans', var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force light palette per design */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(238, 238, 238);
+    --foreground: rgb(84, 18, 18);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'General Sans', var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Utility for container width */
+.container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
